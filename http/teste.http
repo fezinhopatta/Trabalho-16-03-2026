@@ -1,0 +1,43 @@
+@url = http://localhost:3000/filmes
+
+GET {{url}}
+
+###
+
+GET {{url}}/1
+
+###
+
+###
+POST {{url}}
+Content-Type: application/json
+
+
+{
+  "titulo": "Free Fire",
+  "diretor": "jhon doe",
+  "ano": 2000,
+  "assistido": false
+}
+
+### 
+PUT {{url}}/2
+Content-Type: application/json
+
+{
+  "assistido": true
+}
+
+###
+PUT {{url}}/1
+Content-Type: application/json
+
+{
+  "titulo": "Gladiador",
+  "diretor": "Renan",
+  "ano": 1900,
+  "assistido": true
+}
+
+### 
+DELETE {{url}}/1
